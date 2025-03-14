@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools - AI Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="home.html" tabindex="1">Home</a></li>
+                <li><a href="learn.html" tabindex="2">Learn</a></li>
+                <li><a href="about-ai.html" tabindex="3">About AI</a></li>
+                <li><a href="#" tabindex="4">Interactive Tools</a></li>
+                <li><a href="contact.html" tabindex="5">Contact</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" tabindex="6">Dark Mode</button></li>
+                <li><button class="contrast-toggle" onclick="toggleColorBlindMode()" tabindex="7">Color-Blind Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tools-section">
+            <h1>AI Tools</h1>
+            <p>Explore interactive AI tools that help you understand and interact with artificial intelligence.</p>
+
+            <div class="tool">
+                <h2>AI Text Generator</h2>
+                <p>Enter a topic below, and our AI will generate a short text about it!</p>
+                <input type="text" id="ai-input" placeholder="Type a topic..." maxlength="100" tabindex="7">
+                <div id="char-counter">0/100</div>
+                <button onclick="generateText()" tabindex="8" title="Generate text based on your input">Generate</button>
+                <p id="ai-output"></p>
+                <button onclick="copyOutput('ai-output')" title="Copy the generated text to clipboard">Copy Text</button>
+            </div>
+
+            <div class="tool">
+                <h2>AI Sentiment Analyzer</h2>
+                <p>Enter a sentence, and the AI will analyze the sentiment of your text.</p>
+                <input type="text" id="sentiment-input" placeholder="Type a sentence..." tabindex="9">
+                <button onclick="analyzeSentiment()" tabindex="10" title="Analyze the sentiment of your text">Analyze</button>
+                <p id="sentiment-output"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

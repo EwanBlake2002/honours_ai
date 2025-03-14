@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="#" tabindex="1">Home</a></li>
+                <li><a href="learn.html" tabindex="2">Learn</a></li>
+                <li><a href="about-ai.html" tabindex="3">About AI</a></li>
+                <li><a href="tools.html" tabindex="4">Interactive Tools</a></li>
+                <li><a href="contact.html" tabindex="5">Contact</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" tabindex="6">Dark Mode</button></li>
+                <li><button class="contrast-toggle" onclick="toggleColorBlindMode()" tabindex="7">Color-Blind Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" id="home">
+            <h1>Welcome to the AI Learning Hub</h1>
+            <p>Your interactive and accessible guide to learning about AI in today's world.</p>
+        </section>
+
+        <section class="learning-resources" id="learn">
+            <h2>Featured Learning Resources</h2>
+            <div class="resources-grid">
+                <div class="resource">
+                    <h3>AI Basics</h3>
+                    <p>Get started with the fundamentals of artificial intelligence.</p>
+                    <button onclick="startLearning('AI Basics')" aria-label="Learn about AI Basics">Learn More</button>
+                </div>
+                <div class="resource">
+                    <h3>Machine Learning</h3>
+                    <p>Dive deeper into machine learning and its practical applications.</p>
+                    <button onclick="startLearning('Machine Learning')" aria-label="Learn about Machine Learning">Learn More</button>
+                </div>
+                <div class="resource">
+                    <h3>Advanced Topics</h3>
+                    <p>Explore more advanced topics in AI and deepen your knowledge.</p>
+                    <button onclick="startLearning('Advanced Topics')" aria-label="Learn about Advanced Topics">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="quiz-section">
+            <h2>AI Knowledge Quiz</h2>
+            <p>What does AI stand for?</p>
+            <button onclick="checkAnswer('A')">Artificial Intelligence</button>
+            <button onclick="checkAnswer('B')">Automated Input</button>
+            <p id="quiz-feedback"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Learning Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

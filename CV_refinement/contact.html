@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AI Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="home.html" tabindex="1">Home</a></li>
+                <li><a href="learn.html" tabindex="2">Learn</a></li>
+                <li><a href="about-ai.html" tabindex="3">About AI</a></li>
+                <li><a href="tools.html" tabindex="4">Interactive Tools</a></li>
+                <li><a href="#" tabindex="5">Contact</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" tabindex="6">Dark Mode</button></li>
+                <li><button class="contrast-toggle" onclick="toggleColorBlindMode()" tabindex="7">Color-Blind Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here" maxlength="500" required></textarea>
+                <div id="char-counter">0/500</div>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div id="form-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Learning Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

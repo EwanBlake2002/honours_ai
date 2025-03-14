@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AI - AI Learning Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="home.html" tabindex="1">Home</a></li>
+                <li><a href="learn.html" tabindex="2">Learn</a></li>
+                <li><a href="#" tabindex="3">About AI</a></li>
+                <li><a href="tools.html" tabindex="4">Interactive Tools</a></li>
+                <li><a href="contact.html" tabindex="5">Contact</a></li>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()" tabindex="6">Dark Mode</button></li>
+                <li><button class="contrast-toggle" onclick="toggleColorBlindMode()" tabindex="7">Color-Blind Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h1>What is Artificial Intelligence?</h1>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. AI is used in many industries, from healthcare to entertainment, and continues to shape the future of technology.</p>
+
+            <div class="about-grid">
+                <div class="ai-card">
+                    <h2>Machine Learning</h2>
+                    <p>Machine learning allows computers to learn from data without being explicitly programmed.</p>
+                </div>
+                <div class="ai-card">
+                    <h2>Neural Networks</h2>
+                    <p>Inspired by the human brain, neural networks help AI recognize patterns and make decisions.</p>
+                </div>
+                <div class="ai-card">
+                    <h2>Natural Language Processing</h2>
+                    <p>This technology enables AI to understand and process human language.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq">
+                <button class="faq-question" onclick="toggleFAQ(0)">What is AI? ▼</button>
+                <p class="faq-answer">AI refers to computer systems that can perform tasks typically requiring human intelligence, such as problem-solving, speech recognition, and decision-making.</p>
+            </div>
+            <div class="faq">
+                <button class="faq-question" onclick="toggleFAQ(1)">How does AI learn? ▼</button>
+                <p class="faq-answer">AI learns by analyzing data, identifying patterns, and making predictions through algorithms such as machine learning.</p>
+            </div>
+            <div class="faq">
+                <button class="faq-question" onclick="toggleFAQ(2)">Is AI dangerous? ▼</button>
+                <p class="faq-answer">AI is a tool. While it can be used for both good and harmful purposes, ethical AI development focuses on ensuring safety and fairness.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AI Learning Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

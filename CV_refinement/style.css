@@ -1,0 +1,669 @@
+/* Define Color Variables */
+:root {
+    --color-1: #f4cf3e; /* Primary Background */
+    --color-2: #f6b83c; /* Secondary Accents */
+    --color-3: #e77e23; /* Call-to-Action */
+    --color-4: #d15400; /* Strong Emphasis */
+    --color-5: #bf3a2b; /* Alerts, Errors */
+}
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-1);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Color-Blind Mode */
+body.color-blind-mode {
+    /* Add specific styles for color-blind accessibility */
+    filter: grayscale(100%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: var(--color-4);
+    color: #fff;
+    padding: 1rem;
+    z-index: 10;
+}
+
+header nav {
+    position: sticky;
+    top: 0;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--color-3);
+}
+
+header nav ul li button {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem;
+    background-color: var(--color-2);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-4);
+}
+
+.intro p {
+    font-size: 1.2rem;
+}
+
+/* Resources Grid */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.resource {
+    background-color: var(--color-1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resource h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-4);
+}
+
+.resource button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.resource button:hover {
+    background-color: var(--color-4);
+}
+
+.resource:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-4);
+    transform: scale(1.05);
+}
+
+/* High contrast mode */
+body.high-contrast {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast header {
+    background-color: #000;
+}
+
+body.high-contrast footer {
+    background-color: #000;
+    color: white;
+}
+
+/* Contact Page Styling */
+.contact-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-4);
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-3);
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+
+input:focus, textarea:focus {
+    border-color: var(--color-3);
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-4);
+    transform: scale(1.05);
+}
+
+/* Form Validation Feedback */
+input.invalid, textarea.invalid {
+    border: 2px solid red;
+}
+
+/* Character Counter */
+#char-counter {
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* Loading Spinner */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Success/Error Message Animation */
+#form-message {
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#form-message.visible {
+    opacity: 1;
+}
+
+/* High Contrast Mode */
+body.high-contrast .contact-section {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast input, 
+body.high-contrast textarea {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+/* AI Tools Page Styling */
+.tools-section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-1);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tools-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.tools-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-5);
+}
+
+.tool {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 2px solid var(--color-3);
+    border-radius: 8px;
+    background-color: var(--color-2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tool:hover {
+    background-color: var(--color-1);
+    transform: scale(1.02);
+}
+
+input {
+    width: 80%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-3);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--color-4);
+    transform: scale(1.05);
+}
+
+/* AI Output Styling */
+#ai-output, #sentiment-output {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* High Contrast Mode */
+body.high-contrast .tools-section {
+    background-color: black;
+    color: white;
+}
+
+.positive {
+    color: green;
+    font-weight: bold;
+}
+
+.negative {
+    color: red;
+    font-weight: bold;
+}
+
+/* Tooltips */
+button[title] {
+    position: relative;
+}
+
+button[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+body.high-contrast input {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+/* About AI Page Styling */
+.about-section {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--color-1);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-4);
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-5);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.ai-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: var(--color-2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ai-card:hover {
+    background-color: var(--color-1);
+    transform: scale(1.05);
+}
+
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-1);
+}
+
+.faq {
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: var(--color-4);
+}
+
+.faq-answer {
+    display: none;
+    font-size: 1.1rem;
+    padding: 1rem;
+    background-color: var(--color-2);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* High Contrast Mode */
+body.high-contrast .about-section,
+body.high-contrast .faq-section {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast .ai-card {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast .faq-question {
+    background-color: white;
+    color: black;
+}
+
+/* Learn Page Styling */
+.learn-intro {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-1);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.learn-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-4);
+}
+
+.learn-intro p {
+    font-size: 1.2rem;
+    color: var(--color-5);
+}
+
+.learn-sections {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.learn-topic {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background-color: var(--color-2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-title {
+    width: 100%;
+    text-align: left;
+    font-size: 1.4rem;
+    padding: 1rem;
+    background-color: var(--color-3);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.topic-title:hover {
+    background-color: var(--color-4);
+}
+
+.topic-content {
+    display: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--color-1);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.topic-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.topic-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    border-bottom: 1px dotted #007BFF;
+    cursor: help;
+}
+
+.tooltip:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* Quizzes */
+.quiz {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+}
+
+.quiz button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    background-color: #0056b3;
+}
+
+#quiz-feedback-0, #quiz-feedback-1, #quiz-feedback-2 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* High Contrast Mode */
+body.high-contrast .learn-intro,
+body.high-contrast .learn-sections {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast .topic-content {
+    background-color: black;
+    color: white;
+}
+
+body.high-contrast .topic-title {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
